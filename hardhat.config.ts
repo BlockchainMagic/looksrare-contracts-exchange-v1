@@ -26,6 +26,10 @@ const config: HardhatUserConfig = {
       },
       gasPrice: "auto",
     },
+    ropsten: {
+      url: process.env.ROPSTEN_URL || "",
+      accounts: process.env.ROPSTEN_PRIVATE_KEY !== undefined ? [process.env.ROPSTEN_PRIVATE_KEY] : [],
+    },
   },
   etherscan: {
     apiKey: process.env.ETHERSCAN_KEY,
